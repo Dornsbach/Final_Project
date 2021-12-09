@@ -79,3 +79,64 @@ Alert 3 is implemented as follows:
   - **Threshold**: WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
   - **Vulnerability Mitigated**: Virus or Malware
   - **Reliability**: This is Low Reliability because this alert will generate a lot of false positives. CPU can spike for several different reasons.
+  - 
+  - ### Suggestions for Going Further
+ 
+- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
+
+The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
+
+- **Vulnerability 1: Brute Force Attacks** 
+
+  - **Patch: WordPress Hardening**
+
+    * Update WordPress and other software: apt-get upgrade weekly
+    * Popular WordPress Plugins: Loginizer, WP Limit Login Attempts, Brute Force Login Protection: These plugins help protect websites from malicious attacks
+    * Implement a strong password policy: 12 characters/2 special characters and password reset every 60 days
+    * create alerts when when a user has met the "failed login" threshold and lock out the user
+    * Implement a Multi-Factor Authentication password reset policy
+    * Establish rule to block all known VPN Traffic
+
+  - **Why It Works**: 
+
+    * Updating software weekly typically will automatically fix errors and update patches
+    * Plugins help secure the website based on their intended purpose. 
+    * Strong password policies help reduce BruteForce Attacks
+    * Alerts help notify Cyber Professionals when there is unusual activity like a large amount of HTTP Requests
+    * Multi-Factor Authentication is a useful tool to ensure attackers can not gain access to another user's account 
+    * Blocking VPN Traffic is one way monitor and identify traffic
+
+- **Vulnerability 2: Code Injection attacks (XSS or CRLF)**
+
+  - **Patch: Code Injection/DDOS Hardening**
+
+    * Update software: apt-get upgrade weekly
+    * Restrict PHP and EXE 
+    * Establish HTTP Request Limit Rules 
+        - Max URL Length
+        - Max length of a query string
+        - Max size of a request
+    
+  - **Why It Works**: 
+
+    * Updating software weekly typically will automatically fix errors and update patches
+    * Restricting PHP and EXE helps reduce Injection Attacks on the front end
+    * Establishing HTTP Request Limit Rules automatically drops traffic when threshold has been met
+
+- **Vulnerability 3: Virus or Malware** 
+
+  - **Patch**: Virus and Malware Hardening
+
+    * Update software: apt-get upgrade weekly
+    * Update and install industry standard Anti-Virus Software
+    * Implement and Monitor Network using Intrusion Detection System (IDS) 
+        - SNORT
+        - Kibana
+        - Wireshark
+        - Nessus
+    
+  - **Why It Works**: 
+
+     * Updating software weekly typically will automatically fix errors and update patches
+     * Installing Anti-Virus Software is critical to any Network Security. Installing Anti-Virus Software is an Industry Standard Practice.
+     * IDS is critical for network security because it enables you to detect and respond to malicious traffic
