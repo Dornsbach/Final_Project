@@ -8,7 +8,7 @@
 - Suggestions for Going Further
 
 ### Network Topology
-![alt text]https://github.com/Dornsbach/Final_Project/blob/ef7562ec881060678e576ca4d7d3aab97d28e7ae/Final%20Project.drawio.png
+![alt text](https://github.com/Dornsbach/Final_Project/blob/ef7562ec881060678e576ca4d7d3aab97d28e7ae/Final%20Project.drawio.png)
 
 ### The following machines were identified on the network:
 
