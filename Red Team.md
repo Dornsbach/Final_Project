@@ -43,7 +43,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - WPscan was used from the attack machine to enumerate the users on the Target1 wordpress site
       - The Command use
         - `wpscan --url 192.168.1.110/wordpress/ -e u`
-      - SSH'd into `192.168.1.110` using the user `Michael` guessed the weak password `Michael`
+      - SSH'd into `192.168.1.110` using the user `Michael` guessed the weak password `michael`
       - Navigated to /var/wwww/html/
       - Ran `nano services.html` and in the footer information found Flag1
 ![Flag1](https://github.com/Dornsbach/Final_Project/blob/2cb4e4d2784e5efad2b03b91cc428ec39f58b576/Flag1.PNG)
