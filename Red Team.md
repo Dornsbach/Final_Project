@@ -11,7 +11,7 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 $ nmap ... `nmap -sV 192.168.1.110`
-  !(https://github.com/Dornsbach/Final_Project/blob/2cb4e4d2784e5efad2b03b91cc428ec39f58b576/nmap.PNG)
+![nmap](https://github.com/Dornsbach/Final_Project/blob/2cb4e4d2784e5efad2b03b91cc428ec39f58b576/nmap.PNG)
 ```
 
 This scan identifies the services below as potential points of entry:
