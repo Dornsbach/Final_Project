@@ -58,7 +58,7 @@ Your task is to isolate torrent traffic and answer the following questions:
 Find the following information about the machine with IP address 10.0.0.201:
 - MAC address: **00:12:3f:f4:3b:96**
 - Windows username: **elmer.blanco**
-- OS version
+- OS version **Windows 10**
 
 ![blanco](https://github.com/Dornsbach/Final_Project/blob/22c9f567fa01ec760901f4d2d70cc58c77197777/blanco1.PNG)
 
